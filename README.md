@@ -1,11 +1,24 @@
-##我们是第一篇文字##
-
+##JS闭包##
 ###我是第一个例子
 
-    我是第一个段落
-    function a(){
-     alert("我是说明文档")
-    }
+    function f1(){
+	       var n=999
+	function f2(){
+	       alert(n); // 999
+	 }
+	}
 
 
 ### 我是第二个例子 ###
+	function f1(){
+	　var n=999;
+	　nAdd=function(){n+=1}
+	　function f2(){
+	　alert(n);
+	 }
+	return f2;
+	}
+	var result=f1();
+	result(); // 999
+	nAdd();
+	result(); // 1000
